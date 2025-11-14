@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    The Dog Park Finder – Main Site
+    Version: 2.04
+    Repo: https://github.com/aoblak/thedogparkfinder
+  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Dog Park Finder – Find dog parks near you</title>
+  <meta name="description" content="The Dog Park Finder helps you find the nearest dog-friendly parks across Europe – ex-YU, Italy, Austria, Switzerland, Poland, Czechia, Slovakia & more." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">
+    <div class="logo-icon">🐾</div>
+    <span class="logo-text">The Dog Park Finder</span>
+  </div>
+  <nav class="main-nav">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="advertisers.html" class="nav-link">Advertisers</a>
+    <a href="partners.html" class="nav-link">Cities & Tourism</a>
+  </nav>
+</header>
+
+<main class="page-main">
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-eyebrow">v2.04 • Europe coverage</div>
+      <h1 class="hero-title">Find the right dog park. Every time.</h1>
+      <p class="hero-subtitle">
+        The Dog Park Finder helps you locate safe, dog-friendly parks across Europe – with real-world reviews,
+        safety tips and local insights from people who actually walk there.
+      </p>
+      <div class="hero-badges">
+        <span class="hero-badge">Ex-YU • Italy • Austria • Switzerland • Poland • Czechia • Slovakia</span>
+        <span class="hero-badge">Safety & risk tips built-in</span>
+        <span class="hero-badge">Owner reviews – no social-network drama</span>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <section class="search-card" id="search">
+        <h2 class="search-title">Find a dog park near you</h2>
+        <p class="search-subtitle">
+          Use your location or type in a city. We highlight the nearest dog-friendly parks and show known risks, pros & owner reviews.
+        </p>
+        <form class="search-form" id="search-form">
+          <div class="search-row">
+            <input
+              type="text"
+              id="location-input"
+              class="search-input"
+              placeholder="Enter city, region or country (e.g. Zagreb, Ljubljana, Trieste)"
+            />
+          </div>
+          <div class="search-row">
+            <button type="button" class="btn btn-primary" id="use-location-btn">
+              Use my location
+            </button>
+            <button type="submit" class="btn">
+              Search parks
+            </button>
+          </div>
+        </form>
+        <p class="search-meta">
+          Geolocation runs in your browser only. No tracking, no accounts, no nonsense.
+        </p>
+        <div class="map-placeholder" id="map-placeholder">
+          Map / list placeholder – plug in Google Maps / Places API later. For now we use static JSON + local distance search.
+        </div>
+        <div id="park-results" class="park-results"></div>
+      </section>
+    </div>
+  </section>
+
+  <section class="section" id="featured">
+    <h2 class="section-title">Featured parks across the region</h2>
+    <p class="section-intro">
+      A few community favourites across our core region. Curated manually – no one can pay to be „featured“ here.
+    </p>
+    <div class="featured-grid">
+      <article class="featured-card">
+        <div class="featured-city">ZAGREB • HR</div>
+        <div class="featured-name">Bundek Dog Zone</div>
+        <div class="featured-meta">★ 4.8 – Best for large dogs & evening walks</div>
+        <p class="featured-text">
+          Good fences, solid shade and decent water access. Gets busy on sunny Sundays – mornings and late evenings are ideal.
+        </p>
+      </article>
+      <article class="featured-card">
+        <div class="featured-city">LJUBLJANA • SI</div>
+        <div class="featured-name">Tivoli Dog Area</div>
+        <div class="featured-meta">★ 4.7 – Shade & mixed-size friendly</div>
+        <p class="featured-text">
+          Large green zone with plenty of trees and space to split shy and social dogs. Best for everyday walks.
+        </p>
+      </article>
+      <article class="featured-card">
+        <div class="featured-city">WIEN • AT</div>
+        <div class="featured-name">Donauinsel Hundezone</div>
+        <div class="featured-meta">★ 4.9 – Water, space, proper infrastructure</div>
+        <p class="featured-text">
+          Massive riverside area, water access and long paths. Excellent for high-energy dogs if you avoid peak-hour crowds.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="risks">
+    <h2 class="section-title">Risks, downsides & how not to get your dog in trouble</h2>
+    <p class="section-intro">
+      Dog parks are great – until they aren’t. We surface the downsides too: crowding, bad terrain, weak fences and human behaviour.
+      Fast, honest and field-tested.
+    </p>
+    <div class="risks-grid">
+      <article class="risk-card">
+        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Overcrowded = conflict zone</h3>
+        <p class="risk-body">
+          When the park turns into a canine version of Black Friday, stress and conflicts spike. Dogs lose personal space and owners stop tracking body language.
+        </p>
+        <p class="risk-tip">
+          Tip: if it looks like a music festival, walk away or come back early in the morning.
+        </p>
+      </article>
+      <article class="risk-card">
+        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Terrain, holes & bad fences</h3>
+        <p class="risk-body">
+          Broken fences, random holes, glass or junk – one sprint and you’re looking at vet bills. Many „dog parks“ are just reused public land.
+        </p>
+        <p class="risk-tip">
+          Tip: walk the field once before you unclip the leash. 10 seconds of inspection saves months of rehab.
+        </p>
+      </article>
+      <article class="risk-card">
+        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Wrong size mix</h3>
+        <p class="risk-body">
+          Tiny dogs in a tight space with high-drive large dogs is a risk – even without aggression. Pure physics.
+        </p>
+        <p class="risk-tip">
+          Tip: if your dog is snack-sized and everyone else is a shepherd or bully mix – this is not the park for today.
+        </p>
+      </article>
+      <article class="risk-card">
+        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Food & toys in the park</h3>
+        <p class="risk-body">
+          Bringing food into an enclosed dog park is a conflict generator. Some toys can do the same, especially in cramped spaces.
+        </p>
+        <p class="risk-tip">
+          Tip: snacks stay in your pocket, toys only if the park is nearly empty and you’re actively managing play.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reviews-section" id="reviews">
+    <h2 class="section-title">Owner reviews from the field</h2>
+    <p class="section-intro">
+      No accounts, no social-media drama. Just short, focused feedback on what actually matters on the ground:
+      safety, crowding, terrain and vibe.
+    </p>
+    <div class="reviews-layout">
+      <div class="reviews-list" id="reviews-list">
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-name">NeraLovesWalks</div>
+            <div class="review-rating">★★★★★</div>
+          </div>
+          <div class="review-meta">Zagreb – Bundek Dog Zone • 2025-11-10</div>
+          <p class="review-text">
+            Clean, shaded, people are generally respectful. We avoid Sunday noon – everything else works great.
+          </p>
+        </article>
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-name">Marko87</div>
+            <div class="review-rating">★★★★☆</div>
+          </div>
+          <div class="review-meta">Ljubljana – Tivoli • 2025-11-08</div>
+          <p class="review-text">
+            Perfect for mixed-size dogs, but parking can be a pain on sunny weekends. Morning sessions recommended.
+          </p>
+        </article>
+      </div>
+
+      <div class="review-form-card">
+        <h3 class="review-form-title">Add your field report</h3>
+        <p class="review-form-intro">
+          Name, rating, short text. E-mail is optional and never shown publicly. No login required.
+        </p>
+        <form id="review-form" class="review-form" novalidate>
+          <div class="form-row">
+            <label for="review-name">Name / nickname *</label>
+            <input id="review-name" type="text" maxlength="50" required placeholder="e.g. NeraLovesWalks" />
+            <div class="form-error" data-error-for="review-name"></div>
+          </div>
+          <div class="form-row">
+            <label for="review-location">Location (city / park) *</label>
+            <input id="review-location" type="text" maxlength="80" required placeholder="e.g. Vienna – Donauinsel Hundezone" />
+            <div class="form-error" data-error-for="review-location"></div>
+          </div>
+          <div class="form-row">
+            <label for="review-rating">Rating *</label>
+            <select id="review-rating" required>
+              <option value="">Choose rating</option>
+              <option value="5">★★★★★ – Excellent</option>
+              <option value="4">★★★★☆ – Very good</option>
+              <option value="3">★★★☆☆ – Okay</option>
+              <option value="2">★★☆☆☆ – Poor</option>
+              <option value="1">★☆☆☆☆ – Avoid</option>
+            </select>
+            <div class="form-error" data-error-for="review-rating"></div>
+          </div>
+          <div class="form-row">
+            <label for="review-text">Experience *</label>
+            <textarea id="review-text" rows="4" maxlength="400" required
+              placeholder="Short and honest: crowding, safety, terrain, owners’ behaviour..."></textarea>
+            <div class="form-error" data-error-for="review-text"></div>
+          </div>
+          <div class="form-row">
+            <label for="review-email">E-mail (optional, never shown)</label>
+            <input id="review-email" type="email" maxlength="120" placeholder="you@example.com" />
+            <div class="form-error" data-error-for="review-email"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit review
+          </button>
+          <div id="review-success" class="form-success"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>The Dog Park Finder • v2.04 • live since 2025</div>
+  <div>Static frontend only – backend / API ready to attach when needed.</div>
+</footer>
+
+<script src="js/parks-loader.js"></script>
+<script src="js/search.js"></script>
+<script src="js/reviews.js"></script>
+</body>
+</html>

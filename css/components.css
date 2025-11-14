@@ -1,0 +1,108 @@
+/* ============================================
+   UI components – cards, pills, reviews, etc.
+   ============================================ */
+
+.featured-city {
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.06em;
+}
+
+.featured-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.featured-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+
+.pill {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: inline-block;
+}
+
+.pill-hot {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.info-card-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.info-card-text {
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+
+.info-list li::before {
+  content: "• ";
+  color: var(--accent);
+}
+
+.review-card {
+  background: rgba(15,23,42,0.92);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.review-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.review-text {
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.form-error {
+  font-size: 0.75rem;
+  color: #f87171;
+  height: 1rem;
+}
+
+.form-success {
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  margin-top: 0.6rem;
+}
+
+.cta-block {
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(34,197,94,0.35);
+  background: rgba(34,197,94,0.1);
+}
+
+.cta-contact {
+  margin-top: 0.5rem;
+}
+
+.cta-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}

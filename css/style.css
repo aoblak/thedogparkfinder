@@ -1,0 +1,142 @@
+x/* ============================================
+   Global styling – The Dog Park Finder v2.04
+   Base typography, colors, resets
+   ============================================ */
+
+:root {
+  --bg: #020617;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --accent-light: #bbf7d0;
+  --border: #1f2937;
+  --card: #0f172a;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top, #020617 0, #000 55%);
+  color: var(--text);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-header {
+  background: rgba(2, 6, 23, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 1rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, var(--accent-light), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #022c22;
+  font-size: 1rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.nav-link {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.nav-link:hover {
+  border-color: rgba(255,255,255,0.25);
+  color: #fff;
+}
+
+.nav-link.active {
+  border-color: var(--accent);
+  color: var(--accent-light);
+}
+
+.page-main {
+  padding: 2rem 1.4rem 3rem;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.section-intro {
+  max-width: 650px;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.55rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), #4ade80);
+  border-color: var(--accent);
+  color: #022c22;
+  box-shadow: 0 4px 25px rgba(34, 197, 94, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.08);
+}
+
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem 1.6rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}

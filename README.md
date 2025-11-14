@@ -1,2 +1,5 @@
-# thedogparkfinder
-Pages that helps thru google maps find us dog park near me.
+# The Dog Park Finder – v2.04
+
+Static frontend for dog-park discovery across Europe.
+
+## Structure

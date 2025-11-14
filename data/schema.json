@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dog Park Schema",
+  "type": "object",
+  "properties": {
+    "id": {"type": "string"},
+    "country": {"type": "string"},
+    "city": {"type": "string"},
+    "name": {"type": "string"},
+    "latitude": {"type": "number"},
+    "longitude": {"type": "number"},
+    "fenced": {"type": "boolean"},
+    "water": {"type": "boolean"},
+    "shade": {"type": "boolean"},
+    "surface": {"type": "string"},
+    "risk_notes": {"type": "string"},
+    "tips": {"type": "string"},
+    "rating": {"type": "number"},
+    "reviews_count": {"type": "number"}
+  },
+  "required": [
+    "id",
+    "country",
+    "city",
+    "name",
+    "latitude",
+    "longitude"
+  ]
+}

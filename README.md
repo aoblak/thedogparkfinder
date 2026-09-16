@@ -1,58 +1,22 @@
 # The Dog Park Finder
 
-**NERA lightweight discovery surface · OOS integration test-bed**
+A lightweight, mobile-friendly website for finding dog parks.
 
-The Dog Park Finder is the deliberately lean, static implementation inside the **NERA — The First Dog OS** ecosystem. It provides a clean HTML/CSS/JavaScript baseline for dog-park discovery and gives NERA a controlled environment for measuring whether additional platform complexity produces measurable value.
+The public version is intentionally simple: static HTML, CSS and JavaScript with local park data. It is fast, easy to host and useful as a baseline before adding maps, accounts or heavier platform features.
 
-> Status: **v2.04 · OOS read-only pilot preparation**
+## Current status
 
-## Product role
+Working public baseline. The data set and location coverage are still being expanded and verified.
 
-The project is not a replacement for NERA and is not scheduled for consolidation into the main NERA implementation.
+## What works today
 
-- **NERA / neardogpark.com** — primary product platform.
-- **TheDogParkFinder / thedogparkfinder.com** — lightweight NERA surface, benchmark and integration test-bed.
-- **OOS** — optional policy-controlled service layer. The browser remains unprivileged.
+- dog-park listings from local structured data
+- browser-based distance search
+- responsive static pages
+- pricing, advertiser and partner information
+- deployment without a database or privileged backend
 
-Keeping the lightweight implementation separate gives us a useful baseline for performance, UX, SEO, search quality, operational complexity and conversion experiments.
-
-## Architecture
-
-```text
-User
-  |
-  v
-Static HTML / CSS / JS
-  |
-  +---- local parks.json baseline
-  |
-  +---- OOS Adapter (optional)
-             |
-             v
-        OOS Gateway
-             |
-        Policy Engine
-             |
-      allow-listed capabilities
-             |
-      sanitized response
-```
-
-The frontend must never contain privileged OOS credentials, GitHub tokens, filesystem access, deployment credentials or unrestricted execution capabilities.
-
-## OOS pilot scope
-
-The first integration is intentionally **read-only**:
-
-`READ → SEARCH → RANK → OBSERVE → AUDIT`
-
-Explicitly out of scope for the browser pilot:
-
-`WRITE · DELETE · EXEC · DEPLOY · ADMIN`
-
-See [docs/OOS_PILOT.md](docs/OOS_PILOT.md) and [docs/TESTING.md](docs/TESTING.md).
-
-## Current structure
+## Project structure
 
 ```text
 index.html
@@ -65,35 +29,33 @@ data/
 docs/
 ```
 
-The current baseline uses `parks.json` and local distance search. Google Maps / Places and OOS-backed capabilities can be evaluated independently without destroying the static baseline.
+## Why it stays lightweight
 
-## Test strategy
+The Dog Park Finder is part of the broader NERA product direction, but it is not the main NERA application. Keeping this version small makes it useful for testing:
 
-We compare three surfaces where applicable:
-
-1. static HTML baseline,
-2. static HTML + OOS,
-3. primary NERA platform + OOS.
-
-The objective is evidence, not architectural novelty. OOS functionality is retained only when it improves a measurable outcome without unacceptable security, latency or maintenance cost.
+- search quality
+- page speed
+- mobile usability
+- structured data and discoverability
+- whether a proposed integration creates enough value to justify its complexity
 
 ## Security baseline
 
-- no secrets in browser-delivered code;
-- no direct browser access to privileged OOS capabilities;
-- gateway allow-list and input validation;
-- least privilege by default;
-- auditable requests and decisions;
-- graceful fallback to the static experience when OOS is unavailable.
+- no private keys or privileged credentials in browser code
+- no direct browser access to administrative systems
+- external services must be optional and narrowly scoped
+- the site must continue working when an integration is unavailable
 
-## Deployment
+## Run locally
 
-The site remains suitable for static hosting such as GitHub Pages, Cloudflare Pages or Vercel. OOS is attached as an external service and is **not required** for the baseline site to render.
+Serve the repository as a static website. For example:
 
-## Governance
+```bash
+python3 -m http.server 8000
+```
 
-Changes to the OOS integration should be small, reversible and benchmarked. Capability expansion requires explicit review after the read-only pilot passes its acceptance criteria.
+Then open `http://localhost:8000`.
 
 ## License
 
-MIT — subject to final project-wide license review.
+MIT, subject to final project-wide review.

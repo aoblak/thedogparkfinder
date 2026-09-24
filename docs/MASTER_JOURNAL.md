@@ -14,3 +14,14 @@ Adverse: PASS — 16 regression checks cover lost files, stale hashes, private/p
 Rollback: Revert this context change as a Git commit; preserve unrelated commits and earlier journal history.
 Next: Verify repository branch/merge state before reporting adoption; application and deployment status remain independently verified facts.
 <!-- /oos:event -->
+
+<!-- oos:event {"id":"WEB-20260924-001","recorded_at":"2026-09-24T23:13:00+02:00","occurred_at":null,"actor":"ChatGPT","topics":["architecture","editorial","evidence","security"],"status":"VERIFIED","visibility":"PUBLIC"} -->
+## WEB-20260924-001 — Shared web architecture applied to static NERA benchmark
+Summary: Aligned the static NERA benchmark with the shared OOS page contract and made its evidence boundary explicit.
+Sources: aoblak/thedogparkfinder@5cd660849ec26ada2dc2d780521b155608c05279; aoblak/oblak-operating-system@9cc6fbe0b840e02dddea92bd37b018b3dc4c716e; GitHub Issue #8.
+Integrity: PASS — product files and context documents were generated as one bounded Git change; context hashes and journal locators were regenerated deterministically.
+Independent: PASS — the resulting static-site responsibilities were compared with the merged shared OOS contract and the existing client-side search/review implementation.
+Adverse: PASS — unsupported public ratings/review examples were removed from presentation, fixture status is explicit, VITA/Field Notes deployment is not fabricated, and user-entered review text is inserted with textContent rather than innerHTML.
+Rollback: Revert the feature branch/PR commit; no production deployment or external data mutation is performed by this change.
+Next: Review and merge the branch; connect the canonical Field Notes endpoint only after verified WordPress deployment evidence exists.
+<!-- /oos:event -->

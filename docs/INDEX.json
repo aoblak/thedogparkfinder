@@ -8,7 +8,7 @@
     "visibility": "PUBLIC",
     "lifecycle": "BUILDING",
     "review_status": "NEEDS-REVIEW",
-    "base_revision": "5cd660849ec26ada2dc2d780521b155608c05279"
+    "base_revision": "1e717f41ac1bbb87749fae7aaf2019fe5a65a8dc"
   },
   "bootstrap_order": [
     "docs/INDEX.md",
@@ -48,7 +48,7 @@
     {
       "path": "docs/PROJECT_STATE.md",
       "visibility": "PUBLIC",
-      "sha256": "9cd1a5227bfbe2e1d93a35b63f36aa2d24d66320dde5ad3e452c3e0843b7f195"
+      "sha256": "4a72b317633a1cfcfedbfd1a95e3af262b3ec08e68219240577dd648aa142516"
     },
     {
       "path": "docs/MASTER_JOURNAL.md",
@@ -128,8 +128,8 @@
   "sources": [
     {
       "id": "repository-baseline",
-      "locator": "https://github.com/aoblak/thedogparkfinder/tree/5cd660849ec26ada2dc2d780521b155608c05279",
-      "revision": "5cd660849ec26ada2dc2d780521b155608c05279",
+      "locator": "https://github.com/aoblak/thedogparkfinder/tree/1e717f41ac1bbb87749fae7aaf2019fe5a65a8dc",
+      "revision": "1e717f41ac1bbb87749fae7aaf2019fe5a65a8dc",
       "status": "VERIFIED",
       "visibility": "PUBLIC"
     },

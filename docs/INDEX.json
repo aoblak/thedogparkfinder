@@ -48,12 +48,12 @@
     {
       "path": "docs/PROJECT_STATE.md",
       "visibility": "PUBLIC",
-      "sha256": "84c61f3e05f3bdcccae7094977b251e720693385258f80cde68c2daade88e54b"
+      "sha256": "d9e8f1eaab981eb8595b86f8dc8d04bb4d7fa8fef0345b05539ab25b97baa97b"
     },
     {
       "path": "docs/MASTER_JOURNAL.md",
       "visibility": "PUBLIC",
-      "sha256": "7d749e80fb7ff31b3da6db5b022d1981ed8015a484f5146adb569052a40b2575"
+      "sha256": "772f8f14c8532b5697e0242674b8d0bf38ce0f53da55b67646560fe8f72945eb"
     },
     {
       "path": "scripts/oos_context.py",
@@ -177,6 +177,22 @@
       "visibility": "PUBLIC",
       "path": "docs/MASTER_JOURNAL.md",
       "sha256": "80a388102acafea2950a401dacf702ee9ce3e3840ec445dd41bcf23d9ae1e145"
+    },
+    {
+      "id": "SITE-20260924-001",
+      "title": "SITE-20260924-001 — Public site v2.05 patch verified on review branch",
+      "topics": [
+        "site-v2.05",
+        "frontend",
+        "seo",
+        "accessibility",
+        "verification"
+      ],
+      "recorded_at": "2026-09-24T03:40:00+02:00",
+      "status": "VERIFIED",
+      "visibility": "PUBLIC",
+      "path": "docs/MASTER_JOURNAL.md",
+      "sha256": "b4bfd9ddb948caa3766aede6c56b7b20fd4915b8cbbe2f83992de43b31f4ef59"
     }
   ]
 }

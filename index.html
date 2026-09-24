@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    The Dog Park Finder – Main Site
-    Version: 2.04
-    Repo: https://github.com/aoblak/thedogparkfinder
-  -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Dog Park Finder – Find dog parks near you</title>
-  <meta name="description" content="The Dog Park Finder helps you find the nearest dog-friendly parks across Europe – ex-YU, Italy, Austria, Switzerland, Poland, Czechia, Slovakia & more." />
+  <title>Dog Parks Near Me | The Dog Park Finder</title>
+  <meta name="description" content="Find dog parks near you using your city or browser location. Compare local park information, practical safety notes and community field reports." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://thedogparkfinder.com/" />
+  <meta property="og:title" content="Dog Parks Near Me | The Dog Park Finder" />
+  <meta property="og:description" content="Find dog parks near you using your city or browser location." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thedogparkfinder.com/" />
+  <meta property="og:site_name" content="The Dog Park Finder" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
-  <div class="logo">
-    <div class="logo-icon">🐾</div>
+  <a href="index.html" class="logo" aria-label="The Dog Park Finder home">
+    <span class="logo-icon" aria-hidden="true">🐾</span>
     <span class="logo-text">The Dog Park Finder</span>
-  </div>
-  <nav class="main-nav">
-    <a href="index.html" class="nav-link active">Home</a>
+  </a>
+  <nav class="main-nav" aria-label="Main navigation">
+    <a href="index.html" class="nav-link active" aria-current="page">Home</a>
     <a href="pricing.html" class="nav-link">Pricing</a>
     <a href="advertisers.html" class="nav-link">Advertisers</a>
     <a href="partners.html" class="nav-link">Cities & Tourism</a>
   </nav>
 </header>
 
-<main class="page-main">
+<main class="page-main" id="main-content">
   <section class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">v2.04 • Europe coverage</div>
-      <h1 class="hero-title">Find the right dog park. Every time.</h1>
+      <div class="hero-eyebrow">Fast • local • mobile-first</div>
+      <h1 class="hero-title">Find dog parks near you.</h1>
       <p class="hero-subtitle">
         The Dog Park Finder helps you locate safe, dog-friendly parks across Europe – with real-world reviews,
         safety tips and local insights from people who actually walk there.
@@ -57,6 +60,7 @@
               id="location-input"
               class="search-input"
               placeholder="Enter city, region or country (e.g. Zagreb, Ljubljana, Trieste)"
+              aria-label="City, region or country"
             />
           </div>
           <div class="search-row">
@@ -238,8 +242,8 @@
 </main>
 
 <footer class="site-footer">
-  <div>The Dog Park Finder • v2.04 • live since 2025</div>
-  <div>Static frontend only – backend / API ready to attach when needed.</div>
+  <div>The Dog Park Finder</div>
+  <div>Lightweight static finder with local structured data.</div>
 </footer>
 
 <script src="js/parks-loader.js"></script>

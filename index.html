@@ -1,235 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    The Dog Park Finder – Main Site
-    Version: 2.04
-    Repo: https://github.com/aoblak/thedogparkfinder
-  -->
+  <!-- The Dog Park Finder – NERA static benchmark | Version: 2.05 -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Dog Park Finder – Find dog parks near you</title>
-  <meta name="description" content="The Dog Park Finder helps you find the nearest dog-friendly parks across Europe – ex-YU, Italy, Austria, Switzerland, Poland, Czechia, Slovakia & more." />
+  <title>The Dog Park Finder – NERA static benchmark</title>
+  <meta name="description" content="Static NERA benchmark for dog-place discovery, safety context, field notes architecture and evidence-aware contribution flows." />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
 <header class="site-header">
-  <div class="logo">
-    <div class="logo-icon">🐾</div>
-    <span class="logo-text">The Dog Park Finder</span>
-  </div>
-  <nav class="main-nav">
-    <a href="index.html" class="nav-link active">Home</a>
-    <a href="pricing.html" class="nav-link">Pricing</a>
-    <a href="advertisers.html" class="nav-link">Advertisers</a>
-    <a href="partners.html" class="nav-link">Cities & Tourism</a>
+  <div class="logo"><div class="logo-icon">🐾</div><span class="logo-text">The Dog Park Finder</span></div>
+  <nav class="main-nav" aria-label="Primary">
+    <a href="#search" class="nav-link">Find</a>
+    <a href="#understand" class="nav-link">Understand</a>
+    <a href="#field-notes" class="nav-link">Field Notes</a>
+    <a href="#contribute" class="nav-link">Contribute</a>
   </nav>
 </header>
 
 <main class="page-main">
   <section class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">v2.04 • Europe coverage</div>
-      <h1 class="hero-title">Find the right dog park. Every time.</h1>
-      <p class="hero-subtitle">
-        The Dog Park Finder helps you locate safe, dog-friendly parks across Europe – with real-world reviews,
-        safety tips and local insights from people who actually walk there.
-      </p>
+      <div class="hero-eyebrow">NERA • static benchmark v2.05</div>
+      <h1 class="hero-title">Find the right dog place. Know what the record actually supports.</h1>
+      <p class="hero-subtitle">NERA separates place discovery, safety context, field observations and verification status instead of turning every listing into an unsupported claim.</p>
       <div class="hero-badges">
-        <span class="hero-badge">Ex-YU • Italy • Austria • Switzerland • Poland • Czechia • Slovakia</span>
-        <span class="hero-badge">Safety & risk tips built-in</span>
-        <span class="hero-badge">Owner reviews – no social-network drama</span>
+        <span class="hero-badge">Fast static benchmark • no account required</span>
+        <span class="hero-badge">Search and geolocation stay client-side</span>
+        <span class="hero-badge">Fixture data is labelled as unverified</span>
       </div>
     </div>
-
     <div class="hero-right">
       <section class="search-card" id="search">
-        <h2 class="search-title">Find a dog park near you</h2>
-        <p class="search-subtitle">
-          Use your location or type in a city. We highlight the nearest dog-friendly parks and show known risks, pros & owner reviews.
-        </p>
+        <h2 class="search-title">Find a dog place near you</h2>
+        <p class="search-subtitle">Use your location or type a city. This benchmark searches local fixture records; it does not claim those records are currently verified.</p>
         <form class="search-form" id="search-form">
-          <div class="search-row">
-            <input
-              type="text"
-              id="location-input"
-              class="search-input"
-              placeholder="Enter city, region or country (e.g. Zagreb, Ljubljana, Trieste)"
-            />
-          </div>
-          <div class="search-row">
-            <button type="button" class="btn btn-primary" id="use-location-btn">
-              Use my location
-            </button>
-            <button type="submit" class="btn">
-              Search parks
-            </button>
-          </div>
+          <div class="search-row"><input type="text" id="location-input" class="search-input" placeholder="Enter city, region or country" /></div>
+          <div class="search-row"><button type="button" class="btn btn-primary" id="use-location-btn">Use my location</button><button type="submit" class="btn">Search places</button></div>
         </form>
-        <p class="search-meta">
-          Geolocation runs in your browser only. No tracking, no accounts, no nonsense.
-        </p>
-        <div class="map-placeholder" id="map-placeholder">
-          Map / list placeholder – plug in Google Maps / Places API later. For now we use static JSON + local distance search.
-        </div>
+        <p class="search-meta">Geolocation runs in your browser. No account or server-side location history is created by this static benchmark.</p>
+        <div class="map-placeholder" id="map-placeholder">Static benchmark: local JSON + distance search. A production map/evidence layer is intentionally not simulated here.</div>
         <div id="park-results" class="park-results"></div>
       </section>
     </div>
   </section>
 
+  <section class="section" id="explore">
+    <h2 class="section-title">Find. Understand. Contribute.</h2>
+    <p class="section-intro">The same page grammar used across OOS projects, filled with NERA-specific capabilities.</p>
+    <div class="card-grid">
+      <article class="info-card"><h3 class="info-card-title">Find</h3><p class="info-card-text">Search place records and compare distance without confusing discovery data with verification.</p><a class="btn" href="#search">Open search</a></article>
+      <article class="info-card"><h3 class="info-card-title">Understand</h3><p class="info-card-text">Review risks, access context and evidence boundaries before treating a place record as reliable.</p><a class="btn" href="#understand">See risk context</a></article>
+      <article class="info-card"><h3 class="info-card-title">Contribute</h3><p class="info-card-text">Try the session-only field-report UI. Nothing is presented as a persisted public review without a backend record.</p><a class="btn" href="#contribute">Try contribution flow</a></article>
+    </div>
+  </section>
+
   <section class="section" id="featured">
-    <h2 class="section-title">Featured parks across the region</h2>
-    <p class="section-intro">
-      A few community favourites across our core region. Curated manually – no one can pay to be „featured“ here.
-    </p>
+    <h2 class="section-title">Benchmark place fixtures</h2>
+    <p class="section-intro">These cards exercise the interface and search flow. Names and attributes in this repository are fixture data unless a separate source/evidence record says otherwise.</p>
     <div class="featured-grid">
-      <article class="featured-card">
-        <div class="featured-city">ZAGREB • HR</div>
-        <div class="featured-name">Bundek Dog Zone</div>
-        <div class="featured-meta">★ 4.8 – Best for large dogs & evening walks</div>
-        <p class="featured-text">
-          Good fences, solid shade and decent water access. Gets busy on sunny Sundays – mornings and late evenings are ideal.
-        </p>
-      </article>
-      <article class="featured-card">
-        <div class="featured-city">LJUBLJANA • SI</div>
-        <div class="featured-name">Tivoli Dog Area</div>
-        <div class="featured-meta">★ 4.7 – Shade & mixed-size friendly</div>
-        <p class="featured-text">
-          Large green zone with plenty of trees and space to split shy and social dogs. Best for everyday walks.
-        </p>
-      </article>
-      <article class="featured-card">
-        <div class="featured-city">WIEN • AT</div>
-        <div class="featured-name">Donauinsel Hundezone</div>
-        <div class="featured-meta">★ 4.9 – Water, space, proper infrastructure</div>
-        <p class="featured-text">
-          Massive riverside area, water access and long paths. Excellent for high-energy dogs if you avoid peak-hour crowds.
-        </p>
-      </article>
+      <article class="featured-card"><div class="featured-city">ZAGREB • HR</div><div class="featured-name">Bundek Dog Zone</div><div class="featured-meta">Benchmark fixture — not verified here</div><p class="featured-text">Used to exercise fenced/water/shade and location-search UI states.</p></article>
+      <article class="featured-card"><div class="featured-city">LJUBLJANA • SI</div><div class="featured-name">Tivoli Dog Area</div><div class="featured-meta">Benchmark fixture — not verified here</div><p class="featured-text">Used to exercise mixed surface, access-context and city-search states.</p></article>
+      <article class="featured-card"><div class="featured-city">VIENNA • AT</div><div class="featured-name">Donauinsel Hundezone</div><div class="featured-meta">Benchmark fixture — not verified here</div><p class="featured-text">Used to exercise distance sorting and large-area place records.</p></article>
     </div>
   </section>
 
-  <section class="section" id="risks">
-    <h2 class="section-title">Risks, downsides & how not to get your dog in trouble</h2>
-    <p class="section-intro">
-      Dog parks are great – until they aren’t. We surface the downsides too: crowding, bad terrain, weak fences and human behaviour.
-      Fast, honest and field-tested.
-    </p>
+  <section class="section" id="understand">
+    <h2 class="section-title">Understand the downside before you unclip the leash</h2>
+    <p class="section-intro">Risk guidance is general context, not a current inspection report for a specific place.</p>
     <div class="risks-grid">
-      <article class="risk-card">
-        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Overcrowded = conflict zone</h3>
-        <p class="risk-body">
-          When the park turns into a canine version of Black Friday, stress and conflicts spike. Dogs lose personal space and owners stop tracking body language.
-        </p>
-        <p class="risk-tip">
-          Tip: if it looks like a music festival, walk away or come back early in the morning.
-        </p>
-      </article>
-      <article class="risk-card">
-        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Terrain, holes & bad fences</h3>
-        <p class="risk-body">
-          Broken fences, random holes, glass or junk – one sprint and you’re looking at vet bills. Many „dog parks“ are just reused public land.
-        </p>
-        <p class="risk-tip">
-          Tip: walk the field once before you unclip the leash. 10 seconds of inspection saves months of rehab.
-        </p>
-      </article>
-      <article class="risk-card">
-        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Wrong size mix</h3>
-        <p class="risk-body">
-          Tiny dogs in a tight space with high-drive large dogs is a risk – even without aggression. Pure physics.
-        </p>
-        <p class="risk-tip">
-          Tip: if your dog is snack-sized and everyone else is a shepherd or bully mix – this is not the park for today.
-        </p>
-      </article>
-      <article class="risk-card">
-        <h3 class="risk-title"><span class="risk-icon">⚠️</span>Food & toys in the park</h3>
-        <p class="risk-body">
-          Bringing food into an enclosed dog park is a conflict generator. Some toys can do the same, especially in cramped spaces.
-        </p>
-        <p class="risk-tip">
-          Tip: snacks stay in your pocket, toys only if the park is nearly empty and you’re actively managing play.
-        </p>
-      </article>
+      <article class="risk-card"><h3 class="risk-title">Crowding</h3><p class="risk-body">Stress and conflict risk can rise when dogs lose space and owners stop tracking behaviour.</p><p class="risk-tip">Check the actual situation before entering.</p></article>
+      <article class="risk-card"><h3 class="risk-title">Terrain and boundaries</h3><p class="risk-body">Holes, debris and weak fencing can turn a normal sprint into an injury or escape.</p><p class="risk-tip">Walk the boundary before unclipping.</p></article>
+      <article class="risk-card"><h3 class="risk-title">Size and play style</h3><p class="risk-body">A safe interaction depends on more than intent; body size, speed and play style matter.</p><p class="risk-tip">Leave when the mix is wrong for your dog.</p></article>
+      <article class="risk-card"><h3 class="risk-title">Food and toys</h3><p class="risk-body">High-value resources can create avoidable conflict in enclosed spaces.</p><p class="risk-tip">Keep the environment simple when several unfamiliar dogs share it.</p></article>
     </div>
   </section>
 
-  <section class="section reviews-section" id="reviews">
-    <h2 class="section-title">Owner reviews from the field</h2>
-    <p class="section-intro">
-      No accounts, no social-media drama. Just short, focused feedback on what actually matters on the ground:
-      safety, crowding, terrain and vibe.
-    </p>
+  <section class="section" id="field-notes">
+    <h2 class="section-title">NERA Field Notes</h2>
+    <p class="section-intro">Field Notes are the editorial record behind the map: field work, mapping decisions, product constraints and evidence boundaries. The shared WordPress editorial engine is canonical for that surface; this static benchmark does not duplicate its articles.</p>
+    <div class="cta-block"><strong>Canonical public Field Notes endpoint: not connected in this benchmark yet.</strong><p class="cta-meta">A public link will be added only after the WordPress endpoint is deployed and verified.</p></div>
+  </section>
+
+  <section class="section" id="trust">
+    <h2 class="section-title">Evidence and trust boundary</h2>
+    <p class="section-intro">Discovery, editorial context and verification are different layers.</p>
+    <div class="card-grid">
+      <article class="info-card"><h3 class="info-card-title">Static fixture</h3><p class="info-card-text">Useful for UI, search and distance tests. It is not evidence that a place or attribute is current.</p></article>
+      <article class="info-card"><h3 class="info-card-title">Field Note</h3><p class="info-card-text">Explains observations and decisions. Publishing an article does not verify the place by association.</p></article>
+      <article class="info-card"><h3 class="info-card-title">Verified item</h3><p class="info-card-text">Requires item-specific evidence. This static benchmark does not render a VITA Verified badge.</p></article>
+    </div>
+  </section>
+
+  <section class="section reviews-section" id="contribute">
+    <h2 class="section-title">Contribute a field report</h2>
+    <p class="section-intro">This is a client-side interaction demo. Submitted text is displayed only in the current browser session; there is no active persistence or public-review backend.</p>
     <div class="reviews-layout">
       <div class="reviews-list" id="reviews-list">
-        <article class="review-card">
-          <div class="review-header">
-            <div class="review-name">NeraLovesWalks</div>
-            <div class="review-rating">★★★★★</div>
-          </div>
-          <div class="review-meta">Zagreb – Bundek Dog Zone • 2025-11-10</div>
-          <p class="review-text">
-            Clean, shaded, people are generally respectful. We avoid Sunday noon – everything else works great.
-          </p>
-        </article>
-        <article class="review-card">
-          <div class="review-header">
-            <div class="review-name">Marko87</div>
-            <div class="review-rating">★★★★☆</div>
-          </div>
-          <div class="review-meta">Ljubljana – Tivoli • 2025-11-08</div>
-          <p class="review-text">
-            Perfect for mixed-size dogs, but parking can be a pain on sunny weekends. Morning sessions recommended.
-          </p>
-        </article>
+        <article class="review-card" id="review-placeholder"><div class="review-header"><div class="review-name">No persisted reviews in this benchmark</div></div><p class="review-text">Use the form to test the contribution UI. Session entries are not evidence and disappear on reload.</p></article>
       </div>
-
       <div class="review-form-card">
-        <h3 class="review-form-title">Add your field report</h3>
-        <p class="review-form-intro">
-          Name, rating, short text. E-mail is optional and never shown publicly. No login required.
-        </p>
+        <h3 class="review-form-title">Add a session-only field report</h3>
+        <p class="review-form-intro">Name, rating and short text are used only to demonstrate the interface. E-mail is not sent anywhere.</p>
         <form id="review-form" class="review-form" novalidate>
-          <div class="form-row">
-            <label for="review-name">Name / nickname *</label>
-            <input id="review-name" type="text" maxlength="50" required placeholder="e.g. NeraLovesWalks" />
-            <div class="form-error" data-error-for="review-name"></div>
-          </div>
-          <div class="form-row">
-            <label for="review-location">Location (city / park) *</label>
-            <input id="review-location" type="text" maxlength="80" required placeholder="e.g. Vienna – Donauinsel Hundezone" />
-            <div class="form-error" data-error-for="review-location"></div>
-          </div>
-          <div class="form-row">
-            <label for="review-rating">Rating *</label>
-            <select id="review-rating" required>
-              <option value="">Choose rating</option>
-              <option value="5">★★★★★ – Excellent</option>
-              <option value="4">★★★★☆ – Very good</option>
-              <option value="3">★★★☆☆ – Okay</option>
-              <option value="2">★★☆☆☆ – Poor</option>
-              <option value="1">★☆☆☆☆ – Avoid</option>
-            </select>
-            <div class="form-error" data-error-for="review-rating"></div>
-          </div>
-          <div class="form-row">
-            <label for="review-text">Experience *</label>
-            <textarea id="review-text" rows="4" maxlength="400" required
-              placeholder="Short and honest: crowding, safety, terrain, owners’ behaviour..."></textarea>
-            <div class="form-error" data-error-for="review-text"></div>
-          </div>
-          <div class="form-row">
-            <label for="review-email">E-mail (optional, never shown)</label>
-            <input id="review-email" type="email" maxlength="120" placeholder="you@example.com" />
-            <div class="form-error" data-error-for="review-email"></div>
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Submit review
-          </button>
+          <div class="form-row"><label for="review-name">Name / nickname *</label><input id="review-name" type="text" maxlength="50" required /><div class="form-error" data-error-for="review-name"></div></div>
+          <div class="form-row"><label for="review-location">Location label *</label><input id="review-location" type="text" maxlength="80" required /><div class="form-error" data-error-for="review-location"></div></div>
+          <div class="form-row"><label for="review-rating">Session rating *</label><select id="review-rating" required><option value="">Choose rating</option><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select><div class="form-error" data-error-for="review-rating"></div></div>
+          <div class="form-row"><label for="review-text">Experience *</label><textarea id="review-text" rows="4" maxlength="400" required></textarea><div class="form-error" data-error-for="review-text"></div></div>
+          <div class="form-row"><label for="review-email">E-mail (optional; not transmitted)</label><input id="review-email" type="email" maxlength="120" /></div>
+          <button type="submit" class="btn btn-primary">Display in this session</button>
           <div id="review-success" class="form-success"></div>
         </form>
       </div>
@@ -238,8 +120,9 @@
 </main>
 
 <footer class="site-footer">
-  <div>The Dog Park Finder • v2.04 • live since 2025</div>
-  <div>Static frontend only – backend / API ready to attach when needed.</div>
+  <div>The Dog Park Finder • NERA static benchmark v2.05</div>
+  <div><a href="pricing.html">Pricing</a> • <a href="advertisers.html">Advertisers</a> • <a href="partners.html">Cities & Tourism</a></div>
+  <div>Static frontend • no production review persistence • no blanket verification claims.</div>
 </footer>
 
 <script src="js/parks-loader.js"></script>

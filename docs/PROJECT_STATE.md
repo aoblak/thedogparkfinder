@@ -4,18 +4,22 @@ Project: aoblak/thedogparkfinder
 
 Stable repository ID: github:1096360692
 
-Goal: Apply the accepted OOS Context Protocol v0.1 with reproducible local context discovery and validation.
+Goal: Keep the lightweight/static NERA benchmark aligned with the shared OOS web page contract without duplicating the WordPress editorial runtime.
 
-Application lifecycle: UNKNOWN.
+Application lifecycle: BUILDING.
 
-Review status: NEEDS-REVIEW for prior application state; protocol integrity checks are separately reported.
+Review status: NEEDS-REVIEW for live deployment and real-world place evidence. Static benchmark behavior and public-safe architecture are under active review.
 
-Inspected base revision: `d3beada6d09456a5a4765ff94b6f2c053dd8fd0a`.
+Inspected base revision: `5cd660849ec26ada2dc2d780521b155608c05279`.
 
-Current evidence: docs/OOS_PILOT.md identifies this static site as the NERA OOS read-only pilot. That document describes plan/acceptance gates; this context installation does not establish that the adapter or gateway is deployed.
+Current evidence:
+- This repository is the lightweight static NERA benchmark, not the canonical WordPress NERA application.
+- OOS Editorial Engine 1.1.0 and the shared NERA/ArcaNina page contract are merged in `aoblak/oblak-operating-system@9cc6fbe0b840e02dddea92bd37b018b3dc4c716e`.
+- Static park records remain benchmark fixtures unless an item has a separate evidence record. The static UI does not render a VITA Verified badge.
+- The contribution form has no persistence/backend; session entries are browser-session UI only.
 
-Context availability: present in this revision. Whether this revision is merged or deployed is a Git/provider observation, not inferred from these files.
+Context availability: present. Product deployment remains independently verified provider/runtime state.
 
 Canonical shorthand: the accepted glossary defines MJ, PJ, XJ, UM, FMU, GS and SOT. GS means Git State.
 
-Next action: inspect the current Git state and relevant source/journal records before the next product change; record substantive work and refresh/validate the context index before completion.
+Next action: review and merge the shared-web-contract branch, then connect a canonical public Field Notes URL only after the WordPress editorial endpoint is deployed and verified.

@@ -3,20 +3,62 @@
   "title": "Dog Park Schema",
   "type": "object",
   "properties": {
-    "id": {"type": "string"},
-    "country": {"type": "string"},
-    "city": {"type": "string"},
-    "name": {"type": "string"},
-    "latitude": {"type": "number"},
-    "longitude": {"type": "number"},
-    "fenced": {"type": "boolean"},
-    "water": {"type": "boolean"},
-    "shade": {"type": "boolean"},
-    "surface": {"type": "string"},
-    "risk_notes": {"type": "string"},
-    "tips": {"type": "string"},
-    "rating": {"type": "number"},
-    "reviews_count": {"type": "number"}
+    "id": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "number"
+    },
+    "longitude": {
+      "type": "number"
+    },
+    "fenced": {
+      "type": "boolean"
+    },
+    "water": {
+      "type": "boolean"
+    },
+    "shade": {
+      "type": "boolean"
+    },
+    "surface": {
+      "type": "string"
+    },
+    "risk_notes": {
+      "type": "string"
+    },
+    "tips": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "reviews_count": {
+      "type": "number"
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "demo_unverified",
+        "source_supported",
+        "verified"
+      ]
+    },
+    "evidence_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   },
   "required": [
     "id",
@@ -25,5 +67,30 @@
     "name",
     "latitude",
     "longitude"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "evidence_status": {
+            "const": "verified"
+          }
+        },
+        "required": [
+          "evidence_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "evidence_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "evidence_ref"
+        ]
+      }
+    }
   ]
 }

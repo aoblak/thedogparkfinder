@@ -6,9 +6,9 @@
     "name": "aoblak/thedogparkfinder",
     "repository": "https://github.com/aoblak/thedogparkfinder",
     "visibility": "PUBLIC",
-    "lifecycle": "UNKNOWN",
+    "lifecycle": "BUILDING",
     "review_status": "NEEDS-REVIEW",
-    "base_revision": "d3beada6d09456a5a4765ff94b6f2c053dd8fd0a"
+    "base_revision": "5cd660849ec26ada2dc2d780521b155608c05279"
   },
   "bootstrap_order": [
     "docs/INDEX.md",
@@ -48,12 +48,12 @@
     {
       "path": "docs/PROJECT_STATE.md",
       "visibility": "PUBLIC",
-      "sha256": "84c61f3e05f3bdcccae7094977b251e720693385258f80cde68c2daade88e54b"
+      "sha256": "9cd1a5227bfbe2e1d93a35b63f36aa2d24d66320dde5ad3e452c3e0843b7f195"
     },
     {
       "path": "docs/MASTER_JOURNAL.md",
       "visibility": "PUBLIC",
-      "sha256": "7d749e80fb7ff31b3da6db5b022d1981ed8015a484f5146adb569052a40b2575"
+      "sha256": "a29a7ccc80f5064b07f782c091175bf8c6a20be89097052236c7e78402aabb20"
     },
     {
       "path": "scripts/oos_context.py",
@@ -128,8 +128,8 @@
   "sources": [
     {
       "id": "repository-baseline",
-      "locator": "https://github.com/aoblak/thedogparkfinder/tree/d3beada6d09456a5a4765ff94b6f2c053dd8fd0a",
-      "revision": "d3beada6d09456a5a4765ff94b6f2c053dd8fd0a",
+      "locator": "https://github.com/aoblak/thedogparkfinder/tree/5cd660849ec26ada2dc2d780521b155608c05279",
+      "revision": "5cd660849ec26ada2dc2d780521b155608c05279",
       "status": "VERIFIED",
       "visibility": "PUBLIC"
     },
@@ -177,6 +177,21 @@
       "visibility": "PUBLIC",
       "path": "docs/MASTER_JOURNAL.md",
       "sha256": "80a388102acafea2950a401dacf702ee9ce3e3840ec445dd41bcf23d9ae1e145"
+    },
+    {
+      "id": "WEB-20260924-001",
+      "title": "WEB-20260924-001 — Shared web architecture applied to static NERA benchmark",
+      "topics": [
+        "architecture",
+        "editorial",
+        "evidence",
+        "security"
+      ],
+      "recorded_at": "2026-09-24T23:13:00+02:00",
+      "status": "VERIFIED",
+      "visibility": "PUBLIC",
+      "path": "docs/MASTER_JOURNAL.md",
+      "sha256": "e688232e9fc33bccbf6c86a46dc71f6963b7b55c3b27b562b29484d12b394c78"
     }
   ]
 }

@@ -50,6 +50,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .logo {
@@ -61,6 +63,7 @@ img {
 }
 
 .logo-icon {
+  flex-shrink: 0;
   width: 28px;
   height: 28px;
   border-radius: 999px;
@@ -74,6 +77,7 @@ img {
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.9rem;
 }
 

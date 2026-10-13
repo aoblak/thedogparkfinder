@@ -13,7 +13,9 @@
     "risk_notes": "Gets crowded on Sundays",
     "tips": "Best in the evening",
     "rating": 4.8,
-    "reviews_count": 32
+    "reviews_count": 32,
+    "evidence_status": "demo_unverified",
+    "evidence_ref": null
   },
   {
     "id": "hr-st-1",
@@ -29,7 +31,9 @@
     "risk_notes": "Strong sun in summer",
     "tips": "Go early morning",
     "rating": 4.4,
-    "reviews_count": 18
+    "reviews_count": 18,
+    "evidence_status": "demo_unverified",
+    "evidence_ref": null
   },
   {
     "id": "si-lj-1",
@@ -45,7 +49,9 @@
     "risk_notes": "Parking pressure weekends",
     "tips": "Morning walks best",
     "rating": 4.7,
-    "reviews_count": 24
+    "reviews_count": 24,
+    "evidence_status": "demo_unverified",
+    "evidence_ref": null
   },
   {
     "id": "at-w-1",
@@ -61,6 +67,8 @@
     "risk_notes": "Crowded peak hours",
     "tips": "Best outside weekends",
     "rating": 4.9,
-    "reviews_count": 40
+    "reviews_count": 40,
+    "evidence_status": "demo_unverified",
+    "evidence_ref": null
   }
 ]

@@ -8,11 +8,11 @@ Goal: Keep the lightweight/static NERA benchmark aligned with the shared OOS web
 
 Application lifecycle: BUILDING.
 
-Review status: NEEDS-REVIEW for live deployment and real-world place evidence. Static benchmark behavior and public-safe architecture are under active review.
+Review status: VERIFIED for the scoped CSS/navigation/accessibility patch and GitHub Pages served content; NEEDS-REVIEW for custom-domain runtime, native Safari and real-world place evidence.
 
-Reviewed main baseline: `edd1e7098ff138f3b9c03edc2ea7e804795e0113`.
+Integrated product revision: `d64a0da1a9f121f13451ae2cddf48305965f56cd` (PR #7).
 
-Pending proposal: draft PR #7 (`fix/site-v2.05`), refreshed against that baseline. This branch is not deployed.
+PR #7 merged on 2026-10-13 at 11:32:09 UTC. GitHub Pages deployment and served product content are VERIFIED at https://aoblak.github.io/thedogparkfinder/.
 
 Current evidence:
 - This repository is the lightweight static NERA benchmark, not the canonical WordPress NERA application.
@@ -27,10 +27,15 @@ Context availability: present. Product deployment remains independently verified
 Canonical shorthand: the accepted glossary defines MJ, PJ, XJ, UM, FMU, GS and SOT. GS means Git State.
 
 Frontend review evidence (2026-10-13):
-- CSS root typo and pricing link target repaired in draft PR #7; legacy pricing.htm remains a redirect.
+- CSS root typo and pricing link target repaired by merged PR #7; legacy pricing.htm remains a redirect.
 - Existing dark palette and the current benchmark/evidence boundaries retained.
 - Browser checks passed across 4 pages × 7 widths, keyboard skip navigation, local links, city search and session-only reports; 16 context tests passed.
 - Canonical/og:url, favicon and share-image references await verified origin/assets. Text social metadata is present on the advertiser page.
-- Actual iOS/Safari and production runtime remain UNKNOWN. This is local Chromium verification, not a deployment claim.
+- Native iOS/Safari and custom-domain runtime remain UNKNOWN. GitHub Pages served content is verified against the exact tested bytes.
 
-Next action: verify remote PR #7 head and CI after pushing the reviewed branch, then obtain merge review. Verify the actual custom-domain runtime and connect canonical/Field Notes URLs only after their endpoints are verified.
+Deployment verification (2026-10-13):
+- PR #7 merged; main tree equals the tested review tree.
+- Jekyll CI run 38390895021 and Pages deployment run 38390893207 passed for the integrated product revision.
+- All five HTML routes and three CSS files served HTTP 200 and matched the tested source bytes exactly.
+
+Next action: verify native Safari/iPhone, the intended custom-domain runtime and contact mailboxes. Connect canonical/Field Notes URLs only after their endpoints are verified; favicon/social images need actual assets.

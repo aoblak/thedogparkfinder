@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/components.css" />
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="site-header">
-  <div class="logo"><div class="logo-icon">🐾</div><span class="logo-text">The Dog Park Finder</span></div>
+  <a href="index.html" class="logo" aria-label="The Dog Park Finder home"><span class="logo-icon" aria-hidden="true">🐾</span><span class="logo-text">The Dog Park Finder</span></a>
   <nav class="main-nav" aria-label="Primary">
     <a href="#search" class="nav-link">Find</a>
     <a href="#understand" class="nav-link">Understand</a>
@@ -21,10 +22,10 @@
   </nav>
 </header>
 
-<main class="page-main">
+<main class="page-main" id="main-content" tabindex="-1">
   <section class="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">NERA • static benchmark v2.05</div>
+      <div class="hero-eyebrow">NERA • static benchmark</div>
       <h1 class="hero-title">Find the right dog place. Know what the record actually supports.</h1>
       <p class="hero-subtitle">NERA separates place discovery, safety context, field observations and verification status instead of turning every listing into an unsupported claim.</p>
       <div class="hero-badges">
@@ -38,7 +39,7 @@
         <h2 class="search-title">Find a dog place near you</h2>
         <p class="search-subtitle">Use your location or type a city. This benchmark searches local fixture records; it does not claim those records are currently verified.</p>
         <form class="search-form" id="search-form">
-          <div class="search-row"><input type="text" id="location-input" class="search-input" placeholder="Enter city, region or country" /></div>
+          <div class="search-row"><input type="text" id="location-input" class="search-input" placeholder="Enter city, region or country" aria-label="City, region or country" /></div>
           <div class="search-row"><button type="button" class="btn btn-primary" id="use-location-btn">Use my location</button><button type="submit" class="btn">Search places</button></div>
         </form>
         <p class="search-meta">Geolocation runs in your browser. No account or server-side location history is created by this static benchmark.</p>
@@ -120,7 +121,7 @@
 </main>
 
 <footer class="site-footer">
-  <div>The Dog Park Finder • NERA static benchmark v2.05</div>
+  <div>The Dog Park Finder • NERA static benchmark</div>
   <div><a href="pricing.html">Pricing</a> • <a href="advertisers.html">Advertisers</a> • <a href="partners.html">Cities & Tourism</a></div>
   <div>Static frontend • no production review persistence • no blanket verification claims.</div>
 </footer>

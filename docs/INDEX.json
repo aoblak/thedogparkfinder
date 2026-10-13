@@ -28,7 +28,7 @@
     {
       "path": "AGENTS.md",
       "visibility": "PUBLIC",
-      "sha256": "da6ce9cac0d33253d68d5265b83020cc3cca29e0b9951dcbcd0bf1b263885890"
+      "sha256": "6488f8fae87a4c32725e3cf7a96fcc4c04bfb996156c1cfe1e5b9aaefc1f78bb"
     },
     {
       "path": "docs/INDEX.md",
@@ -48,12 +48,12 @@
     {
       "path": "docs/PROJECT_STATE.md",
       "visibility": "PUBLIC",
-      "sha256": "4a72b317633a1cfcfedbfd1a95e3af262b3ec08e68219240577dd648aa142516"
+      "sha256": "48e3c338cdec2f3a6edf19413a0c837cabe4c273cf3258c907ffbbe1806a359b"
     },
     {
       "path": "docs/MASTER_JOURNAL.md",
       "visibility": "PUBLIC",
-      "sha256": "a29a7ccc80f5064b07f782c091175bf8c6a20be89097052236c7e78402aabb20"
+      "sha256": "15b256bae09f8583d5e867953613430cff4344104c92c7fed3d589df7ad9e1a6"
     },
     {
       "path": "scripts/oos_context.py",
@@ -192,6 +192,38 @@
       "visibility": "PUBLIC",
       "path": "docs/MASTER_JOURNAL.md",
       "sha256": "e688232e9fc33bccbf6c86a46dc71f6963b7b55c3b27b562b29484d12b394c78"
+    },
+    {
+      "id": "SITE-20260924-001",
+      "title": "SITE-20260924-001 — Public site v2.05 patch verified on review branch",
+      "topics": [
+        "site-v2.05",
+        "frontend",
+        "seo",
+        "accessibility",
+        "verification"
+      ],
+      "recorded_at": "2026-09-24T03:40:00+02:00",
+      "status": "VERIFIED",
+      "visibility": "PUBLIC",
+      "path": "docs/MASTER_JOURNAL.md",
+      "sha256": "b4bfd9ddb948caa3766aede6c56b7b20fd4915b8cbbe2f83992de43b31f4ef59"
+    },
+    {
+      "id": "SITE-20261013-001",
+      "title": "SITE-20261013-001 — Refresh existing PR #7 against current main and verify responsive pages",
+      "topics": [
+        "site-v2.05",
+        "frontend",
+        "seo",
+        "accessibility",
+        "verification"
+      ],
+      "recorded_at": "2026-10-13T11:18:01+00:00",
+      "status": "VERIFIED",
+      "visibility": "PUBLIC",
+      "path": "docs/MASTER_JOURNAL.md",
+      "sha256": "8c749dbe51b1db04f2edbe801fdd6d9f198786b4f6fa41def09a8ddf3e00d750"
     }
   ]
 }

@@ -56,6 +56,14 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000`.
 
+## Frontend review notes
+
+The shared styles retain the existing dark design. The advertiser page adds description and text social metadata; pages include keyboard skip links and responsive navigation. `pricing.html` is the current pricing page and `pricing.htm` redirects older links to it.
+
+Serve over HTTP for local verification: the finder loads `data/parks.json` with `fetch`, so opening HTML directly from the filesystem is not the supported development path.
+
+Before production publication, confirm the intended public origin before adding canonical and `og:url` metadata. Favicon and social-image links must point to real assets. Fixture records and browser-session reports are not verified place evidence or persisted public reviews.
+
 ## License
 
 MIT, subject to final project-wide review.

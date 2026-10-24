@@ -21,7 +21,7 @@
     if (parsed.protocol !== "https:" || parsed.username || parsed.password || parsed.search || parsed.hash) {
       throw new Error("Public API must be a plain HTTPS origin/base path");
     }
-    config.publicApiBase = parsed.href.replace(/\\/$/, "");
+    config.publicApiBase = parsed.href.endsWith("/") ? parsed.href.slice(0, -1) : parsed.href;
   }
   async function readJSON(url) {
     const controller = new AbortController();
